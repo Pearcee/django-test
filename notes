@@ -1,0 +1,14 @@
+
+source env/bin/activate
+python -m venv env
+pip install --upgrade pip
+pip install django
+
+django-admin startproject django_blog
+python manage.py runserver
+
+python manage.py startapp blog
+
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
