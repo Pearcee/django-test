@@ -26,7 +26,7 @@ touch personal_portfolio/templates/base.html
 mkdir projects/templates/
 touch projects/templates/project_index.html
 
-
+python manage.py shell  
 from projects.models import Project
 p1 = Project(
      title='My First Project',
@@ -37,3 +37,8 @@ p1 = Project(
 p1.save()
 
 python manage.py startapp blog
+
+django-admin startproject mycalendar
+cd mycalendar
+python manage.py startapp events
+
